@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Geo-Ace</string>
+
+    <string name="quiz_rules">
+        Welcome to Geo-Ace. The purpose of this quiz is to test your geography knowledge. You will be asked 6 questions.
+        Each question will ask you to select the correct continent in which the given country is located.
+        There will be 3 continents to choose from. Once you have selected your choice, swipe left to progress to the next question.
+        You will be shown your results after completing the quiz. Good Luck!
+    </string>
+
+    <string name="new_quiz_button">Start new quiz</string>
+    <string name="past_quiz_button">View past results</string>
+</resources>
