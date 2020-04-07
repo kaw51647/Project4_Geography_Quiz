@@ -10,7 +10,7 @@ public class GeoQuizDBHelper extends SQLiteOpenHelper {
     private static final int DB_VERSION = 1;
 
     public static final String TABLE_GEOQUIZ = "geoquiz";
-    public static final String GEOQUIZ_COLUMN_ID = "id";
+    public static final String GEOQUIZ_COLUMN_ID = "_id";
     public static final String GEOQUIZ_COLUMN_COUNTRY = "country";
     public static final String GEOQUIZ_COLUMN_CONTINENT = "continent";
 
