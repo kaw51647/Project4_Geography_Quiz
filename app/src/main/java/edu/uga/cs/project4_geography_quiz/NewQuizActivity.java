@@ -15,6 +15,7 @@ public class NewQuizActivity extends AppCompatActivity {
     private TextView textView1;
     private RadioButton radio1, radio2, radio3;
     public Date quizDate;
+    public Float quizResult;
     public Question [] quizQuestions;
 
 
@@ -27,9 +28,9 @@ public class NewQuizActivity extends AppCompatActivity {
         quizQuestions = new Question[6];            //create array of Question objects for quiz
 
 
-        //load in String values from database table
+        //load in String values
 
-        //load in question values from database
+        //load in question values
         for(int i=0; i<6; i++) {
             quizQuestions[i].setOption1(option1String);
         }
