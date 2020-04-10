@@ -12,4 +12,8 @@
     <string name="past_quiz_button">View past results</string>
     <string name="quiz_question">What continent is the following country located in?</string>
     <string name="swipe_prompt">Swipe left to progress once you have selected your answer.</string>
+    <string name="default_question">Country X</string>
+    <string name="defualt_radio1">Continent 1</string>
+    <string name="default_radio2">Continent 2</string>
+    <string name="default_radio3">Continent 3</string>
 </resources>
