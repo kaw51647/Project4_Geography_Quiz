@@ -32,10 +32,6 @@ public class MainActivity extends AppCompatActivity {
         start_btn.setOnClickListener( new StartButtonClickListener() );
         results_btn.setOnClickListener( new ResultsButtonClickListener() );
 
-        GeoQuizData db = new GeoQuizData(context);
-        db.open();
-        db.close();
-
     }
 
 
