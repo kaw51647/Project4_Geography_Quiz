@@ -13,25 +13,24 @@ public class GeoQuizData {
 
     private SQLiteDatabase db;
     private SQLiteOpenHelper geoQuizDbHelper;
+    private GeoQuizDBHelper helper;
     private static GeoQuizData instance;
+    private final Context context;
     Cursor cursor = null;
     int counter = 0;
     int maxCountryCount = 6;
 
     public GeoQuizData(Context context) {
         this.geoQuizDbHelper = new GeoQuizDBHelper(context);
-    }
-
-    public static GeoQuizData getInstance(Context context) {
-        if (instance == null) {
-            instance = new GeoQuizData(context);
-        }
-        return instance;
+        this.context = context;
     }
 
     //open database
-    public void open() {
-        db = geoQuizDbHelper.getWritableDatabase();
+    public GeoQuizData open() {
+        helper.openDatabase();
+        helper.close();
+        db = helper.getWritableDatabase();
+        return this;
     }
 
     //close database
@@ -53,7 +52,7 @@ public class GeoQuizData {
             // collect 6 countries into a List
             if( cursor.getCount() > 0 ) {
                 while( cursor.moveToNext() && counter < maxCountryCount) {
-                    // get all attribute values of this job lead
+                    // get all attribute values of this country object
                     int id = cursor.getInt(cursor.getColumnIndex("id"));
                     String country = cursor.getString(cursor.getColumnIndex("country"));
                     String continent = cursor.getString(cursor.getColumnIndex("continent"));
@@ -75,8 +74,9 @@ public class GeoQuizData {
                 cursor.close();
             }
         }
-        // return a list of retrieved job leads
+        // return a list of retrieved countries
         return countries;
     }
 
 }
+
