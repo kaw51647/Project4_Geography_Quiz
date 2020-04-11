@@ -47,7 +47,7 @@ public class GeoQuizData {
 
         try {
             // Execute the select query and get the Cursor to iterate over the retrieved rows
-            cursor = db.rawQuery("SELECT * FROM quiz1", null);
+            cursor = db.rawQuery("SELECT * FROM quiz1 ORDER BY RANDOM() LIMIT 1", null);
 
             // collect 6 countries into a List
             if( cursor.getCount() > 0 ) {
