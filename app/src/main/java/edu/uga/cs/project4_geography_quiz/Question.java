@@ -74,7 +74,7 @@ public class Question {
 
 
     /* function that loads data into Question */
-    public void populateQuestion() {
+    /*public void populateQuestion() {
 
         Country temp = null;    /* LOAD RANDOM DATABASE COUNTRY OBJECT INTO THIS VARIABLE */
         String tempCountry = null, tempContinent = null;  /* OR LOAD STRING VALUES FROM DATABASE INTO THESE AND I WILL CONVERT THOSE INTO A COUNTRY OBJECT */
@@ -84,11 +84,11 @@ public class Question {
         temp.setContinent(tempContinent);
         */
 
-        this.countryX = temp;
+        //this.countryX = temp;
 
 
-        /* this is where I will populate the other answer choices randomly */
+        // this is where I will populate the other answer choices randomly
 
-    }
+   // }
 
 }

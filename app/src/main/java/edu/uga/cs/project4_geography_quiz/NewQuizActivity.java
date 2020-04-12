@@ -25,8 +25,10 @@ public class NewQuizActivity extends AppCompatActivity implements GestureDetecto
     public List<Question> quizQuestions;
     public List<Country> quizCountries;
     private GestureDetectorCompat detector;
-    private float x1,x2;
-    static final int MIN_DISTANCE = 150;
+    private String [] sampleContinents = {"Asia", "Europe", "North America", "South America", "Africa", "Oceana"};
+    private int numberCorrect;
+    private Country c1 = new Country("France", "Europe");
+    private Question q1 = new Question("Europe", "Oceana", "Asia", c1);
 
     //public GeoQuizData data;
 
@@ -55,7 +57,7 @@ public class NewQuizActivity extends AppCompatActivity implements GestureDetecto
 
 
         /*--------------------------- TROUBLE WITH DATABASE DATA--------------------------------- */
-        GeoQuizData data;
+         // GeoQuizData data;
         /* TROUBLE WITH DATABASE DATA */
         //data.open();
         //quizCountries = data.retrieveCountries();
@@ -95,12 +97,16 @@ public class NewQuizActivity extends AppCompatActivity implements GestureDetecto
 
 
 
-         Country c1 = new Country("France", "Europe");
-         Question q1 = new Question("Europe", "Georgia", "fff", c1);
+        // Country c1 = new Country("France", "Europe");
+        // Question q1 = new Question("Europe", "Oceana", "Asia", c1);
          q1.countryX.setCountryName("France");
-        //q1.countryX.setContinent("Europe");
-        // textView1.setText(q1.countryX.getCountryName());
-        //  radio1.setText(q1.countryX.getContinent());
+         q1.countryX.setContinent("Europe");
+         textView1.setText(q1.countryX.getCountryName());
+         radio1.setText(q1.countryX.getContinent());
+         radio2.setText(q1.getOption2());
+         radio3.setText(q1.getOption3());
+
+
 
 
 
@@ -132,9 +138,11 @@ public class NewQuizActivity extends AppCompatActivity implements GestureDetecto
     }*/
 
 
+    public void fillOptions(Question x) {
+
+    }
 
 
-    //for detecting swipe left
     @Override
     public boolean onTouchEvent(MotionEvent event)
     {
@@ -172,8 +180,20 @@ public class NewQuizActivity extends AppCompatActivity implements GestureDetecto
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
         if (e1.getX() > e2.getX()) {
-            radio1.setText("Swiped");
+            //radio1.setText("Swiped");
 
+
+            //fill new question function
+            q1.countryX.setCountryName("China");
+            q1.countryX.setContinent("Asia");
+            q1.setOption2("Africa");
+            q1.setOption3("South America");
+            textView1.setText(q1.countryX.getCountryName());
+            radio1.setText(q1.countryX.getContinent());
+            radio2.setText(q1.getOption2());
+            radio3.setText(q1.getOption3());
+
+            //now for q2-6
 
         }
             return true;
