@@ -40,6 +40,7 @@ public class GeoQuizData {
         }
     }
 
+
     //query result from database
     //must pick 6 countries randomly
     public List<Country> retrieveCountries() {
@@ -77,6 +78,8 @@ public class GeoQuizData {
         // return a list of retrieved countries
         return countries;
     }
+
+
 
 }
 
