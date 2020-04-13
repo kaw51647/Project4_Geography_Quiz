@@ -16,4 +16,6 @@
     <string name="defualt_radio1">Continent 1</string>
     <string name="default_radio2">Continent 2</string>
     <string name="default_radio3">Continent 3</string>
+    <string name="endResultsTitle">Your Final Score is:</string>
+    <string name="endResultsButton">Return Home</string>
 </resources>

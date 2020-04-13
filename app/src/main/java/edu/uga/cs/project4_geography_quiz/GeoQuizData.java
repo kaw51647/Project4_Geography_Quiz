@@ -19,6 +19,8 @@ public class GeoQuizData {
     Cursor cursor = null;
     int counter = 0;
     int maxCountryCount = 6;
+   // public List<Country> dataList = new ArrayList<>();
+
 
     public GeoQuizData(Context context) {
         this.geoQuizDbHelper = new GeoQuizDBHelper(context);
@@ -75,6 +77,18 @@ public class GeoQuizData {
                 cursor.close();
             }
         }
+
+        /*
+        dataList.add(countries.get(0));
+        dataList.add(countries.get(1));
+        dataList.add(countries.get(2));
+        dataList.add(countries.get(3));
+        dataList.add(countries.get(4));
+        dataList.add(countries.get(5));
+        */
+
+
+
         // return a list of retrieved countries
         return countries;
     }

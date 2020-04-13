@@ -1,5 +1,6 @@
 package edu.uga.cs.project4_geography_quiz;
 
+
 public class Question {
 
     private long id;
@@ -11,21 +12,22 @@ public class Question {
 
     //constructors
     public Question() {
-        this.id = -1;
-        this.option1 = null;
-        this.option2 = null;
-        this.option3 = null;
-        this.countryX = null;
+        //this.id = -1;
+        this.countryX = new Country("Blank x", "Blank cont");
+        this.option1 = "Blank 1";
+        this.option2 = "Blank 2";
+        this.option3 = "Blank 3";
+        correctAnswer = "null";
     }
 
     public Question(String option1, String option2, String option3, Country countryX) {
-        this.id = -1;
+       // this.id = -1;
         this.option1 = option1;
         this.option2 = option2;
         this.option3 = option3;
         this.countryX = countryX;
+        correctAnswer = this.countryX.getContinent();
     }
-
 
     //getters/setters
     public long getId()
@@ -70,6 +72,15 @@ public class Question {
     public void setCountryX(Country countryX)
     {
         this.countryX = countryX;
+    }
+
+    public void setCorrectAnswer(String correctAnswer)
+    {
+        this.correctAnswer = correctAnswer;
+    }
+    public String getCorrectAnswer()
+    {
+        return correctAnswer;
     }
 
 
